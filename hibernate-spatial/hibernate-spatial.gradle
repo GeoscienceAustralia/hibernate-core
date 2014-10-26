@@ -78,11 +78,11 @@ repositories {
     mavenRepo name:"hibernate-spatial", urls:"http:://www.hibernatespatial.org/repository"
 }
 
-uploadArchives {
-    repositories.mavenDeployer {
-        name = 'sshDeployer' // optional
-        configuration = configurations.deployerJars
-        repository(url: "scp://www.hibernatespatial.org/var/maven/repository/")
-    }
-}
+/*uploadArchives {*/
+/*    repositories.mavenDeployer {*/
+/*        name = 'sshDeployer' // optional*/
+/*        configuration = configurations.deployerJars*/
+/*        repository(url: "scp://www.hibernatespatial.org/var/maven/repository/")*/
+/*    }*/
+/*}*/
 

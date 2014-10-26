@@ -267,13 +267,18 @@ subprojects { subProject ->
             pom.project pomConfig
         }
 
+        /*uploadArchives {*/
+        /*    repositories.mavenDeployer {*/
+        /*        name = 'HSDeployer'*/
+        /*        configuration = configurations.deployerJars*/
+        /*        pom.project pomConfig*/
+        /*        repository(id: "hs-releases-repository", url: "scp://www.hibernatespatial.org:/var/maven/repository")*/
+        /*        snapshotRepository(id: "hs-snapshots-repository", url: "scp://www.hibernatespatial.org:/var/maven/repository")*/
+        /*    }*/
+        /*}*/
         uploadArchives {
             repositories.mavenDeployer {
-                name = 'HSDeployer'
-                configuration = configurations.deployerJars
-                pom.project pomConfig
-                repository(id: "hs-releases-repository", url: "scp://www.hibernatespatial.org:/var/maven/repository")
-                snapshotRepository(id: "hs-snapshots-repository", url: "scp://www.hibernatespatial.org:/var/maven/repository")
+                repository(url: "http://maven-int.ga.gov.au/nexus/content/repositories/releases")
             }
         }
 
